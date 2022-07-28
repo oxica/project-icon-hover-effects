@@ -38,3 +38,17 @@ ul li{
 ul li:hover{
     width: 180px;
 }
+
+ul li::before{
+    content:'';
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    background: linear-gradient(45deg, var(--i), var(--j));
+    opacity: 0;
+    transition: 0.5s;
+}
+
+ul li:hover::before{
+    opacity: 1;
+}
